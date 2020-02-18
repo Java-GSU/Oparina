@@ -1,5 +1,7 @@
 package by.gsu.pms;
 
+import static by.gsu.pms.Util.*;
+
 public class BusinessTrip {
 
     private static final int RATE = 25000;
@@ -52,9 +54,7 @@ public class BusinessTrip {
         return account + ";" + convertMoney(transport) + ";" + days + ";" + convertMoney(getTotal());
     }
 
-    private static String convertMoney(int value) {
-        return (value / 100) + "." + (value % 100)/10 + value%10;
-    }
+
 }
 
 
