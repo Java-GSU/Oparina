@@ -29,6 +29,7 @@ public class Runner {
         for (BusinessTrip trip : businessTrips){
             System.out.println(trip);
         }
+        System.out.println("\n");
            
         int totalExpenses = 0;
         for (BusinessTrip trip : businessTrips){
