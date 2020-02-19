@@ -1,4 +1,5 @@
 import by.gsu.pms.BusinessTrip;
+import static by.gsu.pms.Util.*;
 
 public class Runner {
 
@@ -28,7 +29,14 @@ public class Runner {
         for (BusinessTrip trip : businessTrips){
             System.out.println(trip);
         }
-
+           
+        int totalExpenses = 0;
+        for (BusinessTrip trip : businessTrips){
+            if (trip != null) {
+                totalExpenses += trip.getTotal();
+            }
+        }
+        System.out.println("Сумма общих расходов: " + convertMoney(totalExpenses));
 
     }
 
