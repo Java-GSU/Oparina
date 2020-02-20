@@ -4,7 +4,7 @@ import static by.gsu.pms.Util.*;
 
 public class BusinessTrip {
 
-    private static final int RATE = 25000;
+    public static final int RATE = 25000;
     private String account;
     private int transport;
     private int days;
