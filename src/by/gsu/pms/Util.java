@@ -1,8 +1,7 @@
 package by.gsu.pms;
 
-import java.util.Arrays;
 import java.text.DecimalFormat;
-import java.util.Comparator;
+
 
 public class Util {
 
@@ -17,11 +16,4 @@ public class Util {
         double area = Double.parseDouble((value / 10) + "." + value%10);
         return new DecimalFormat("#0.0").format(area);
     }
-
-    public static City[] get_sorted_purchase_by_name(City[] array) {
-
-        Arrays.sort(array, Comparator.comparing(City::getNameCity));
-        return array;
-    }
-
 }
