@@ -1,9 +1,12 @@
 //Задание 16. Состав класса City (город) название, население, площадь. Подсчитать общую площадь и количество городов миллионеров.
 
 import by.gsu.pms.City;
-import by.gsu.pms.Util;
+import by.gsu.pms.SortByArea;
+import by.gsu.pms.SortByName;
 
-import static by.gsu.pms.Util.*;
+import java.util.Arrays;
+
+import static by.gsu.pms.Util.convertArea;
 
 
 
@@ -11,15 +14,15 @@ public class Runner {
 
     public static void main(String[] args) {
         City[] cities = {
-                new City("Minsk", 1975000 , 3488),
-                new City("Brest",343985 ,1461),
-                null,
+                new City("Minsk", 1975000, 3488),
+                new City("Brest", 343985, 1461),
+                //null,
                 new City("Mogilev", 380440, 1185),
-                new City("Gomel",535693 , 1398),
+                new City("Gomel", 535693, 1398),
                 new City("Moscow", 11920000, 25110),
                 new City(),
                 new City("Berlin", 3748000, 8918),
-                new City("Ottawa", 994837 , 27900),
+                new City("Ottawa", 994837, 27900),
                 new City("Belgorod", 356426, 1531)
         };
 
@@ -30,15 +33,8 @@ public class Runner {
             System.out.println("\n");
         }
 
-        for (City nameCity : Util.get_sorted_purchase_by_name(cities)) {
-                nameCity.show();
-
-        }
-
-
-
         int totalArea = 0;
-        for (City city : cities){
+        for (City city : cities) {
             if (city != null) {
                 totalArea += city.getArea();
             }
@@ -47,16 +43,22 @@ public class Runner {
 
 
         int count = 0;
-        for (City city : cities){
+        for (City city : cities) {
             if (city != null && city.getPopulation() > 1000000) {
 
-                count ++;
+                count++;
             }
         }
         System.out.println("Количество городов миллионеров: " + count);
 
-    }
 
+        Arrays.sort(cities, new SortByArea());
+        System.out.println("Sorted by area: " + Arrays.toString(cities));
+
+        Arrays.sort(cities, new SortByName());
+        System.out.println("Sorted by CityName: " + Arrays.toString(cities));
+
+    }
 
 
 }
