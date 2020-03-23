@@ -1,6 +1,6 @@
 package by.gsu.pms;
-import static by.gsu.pms.Util.*;
-//Задание 16. Состав класса City (город) название, население, площадь. Подсчитать общую площадь и количество городов миллионеров.
+import static by.gsu.pms.Util.convertArea;
+import static by.gsu.pms.Util.convertPopulation;
 
 public class City {
 
@@ -9,6 +9,9 @@ public class City {
     private int area;
 
     public City() {
+        this.nameCity = " ";
+        this.population = 0;
+        this.area = 0;
 
     }
 
