@@ -38,12 +38,12 @@ public class Subject {
 
     public double getMass(){
 
-        return material.getDensity() * volume / 100;
+        return material.getDensity() * volume;
     }
 
     public String toString() {
 
-        return name + ";" + material + ";" + String.format("%.2f", volume / 100) + ";" + String.format("%.1f", getMass());
+        return name + ";" + material + ";" + volume + ";" + String.format("%.1f", getMass());
     }
 
 
