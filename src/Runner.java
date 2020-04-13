@@ -4,7 +4,7 @@ import by.gsu.pms.Subject;
 public class Runner {
     public static void main(String[] args) {
         Materials STEEL = Materials.STEEL;
-        Subject wire = new Subject("wire", STEEL, 3);
+        Subject wire = new Subject("wire", STEEL, 0.03);
         System.out.println(wire);
 
         Materials COOPER = Materials.COOPER;
