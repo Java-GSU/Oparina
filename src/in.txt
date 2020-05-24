@@ -1,0 +1,6 @@
+Purchase coffee 4.7 10
+Purchase coffee 5.19 1
+Discount coffee 7.5 3 14
+Discount coffee 3 5 12
+Purchase coffee 8.11 8
+Discount coffee 2 6 13
