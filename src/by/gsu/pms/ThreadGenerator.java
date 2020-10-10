@@ -60,8 +60,11 @@ public class ThreadGenerator {
         }
         return result;
     }
-
-   // public void close() {
-
-  //  }
+    
+    public void stop()
+    {
+        for (CalculatorThread thread: this.threads){
+            exit = false;
+        }
+    }
 }
