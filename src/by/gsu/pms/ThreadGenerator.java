@@ -2,47 +2,49 @@ package by.gsu.pms;
 
 public class ThreadGenerator {
 
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_PURPLE = "\u001B[35m";
-    public static final String ANSI_GREEN = "\u001B[32m";
+public static final String ANSI_RESET = "\u001B[0m";
+public static final String ANSI_PURPLE = "\u001B[35m";
+public static final String ANSI_GREEN = "\u001B[32m";
 
-    private CalculatorThread[] threads;
-    private final OperationSign operationSign;
-    private boolean exit = false;
+private CalculatorThread[] threads;
+private final OperationSign operationSign;
+private boolean exit = false;
 
-    public ThreadGenerator(int countOfThreads, OperationSign operationSign, int maxValue) {
-        this.operationSign = operationSign;
+public ThreadGenerator(int countOfThreads, OperationSign operationSign, int maxValue) {
+    this.operationSign = operationSign;
 
-        System.out.println(ANSI_PURPLE + " Count of threads: " + ANSI_GREEN + countOfThreads + ANSI_RESET +
-                ANSI_PURPLE + "\n Max value: " + ANSI_GREEN + maxValue + ANSI_RESET +
-                ANSI_PURPLE + "\n Operation: " + ANSI_GREEN + operationSign + ANSI_RESET);
+    System.out.println(ANSI_PURPLE + " Count of threads: " + ANSI_GREEN + countOfThreads + ANSI_RESET +
+            ANSI_PURPLE + "\n Max value: " + ANSI_GREEN + maxValue + ANSI_RESET +
+            ANSI_PURPLE + "\n Operation: " + ANSI_GREEN + operationSign + ANSI_RESET);
 
-        if (maxValue > countOfThreads) {
-            CalculatorThread[] arrayThreads = new CalculatorThread[countOfThreads];
+    if (maxValue > countOfThreads) {
+        CalculatorThread[] arrayThreads = new CalculatorThread[countOfThreads];
 
-            int threadCapacity = maxValue / countOfThreads;
-            for (int i = 0; i < countOfThreads; i++) {
+        int threadCapacity = maxValue / countOfThreads;
+        for (int i = 0; i < countOfThreads; i++) {
 
-                int startThead = i * threadCapacity + 1;
-                int endThead = i * threadCapacity + threadCapacity;
+            int startThead = i * threadCapacity + 1;
+            int endThead = i * threadCapacity + threadCapacity;
 
-                arrayThreads[i] = new CalculatorThread(startThead, endThead);
-            }
-            this.threads = arrayThreads;
-        } else {
-            System.out.println("Error maxValue must be greater than countOfThreads!");
+            arrayThreads[i] = new CalculatorThread(startThead, endThead);
         }
+        this.threads = arrayThreads;
+    } else {
+        System.out.println("Error maxValue must be greater than countOfThreads!");
     }
+}
 
-    public void execute() {
-        for (CalculatorThread thread: this.threads){
-            thread.start();
-        }
+public void execute() {
+    for (CalculatorThread thread: this.threads){
+        thread.start();
     }
+}
 
-    public int getResult() throws InterruptedException {
-        int result = operationSign.ordinal() < 2 ? 0 : 1;
+public int getResult() throws InterruptedException {
+    int result = operationSign.ordinal() < 2 ? 0 : 1;
+    if (!exit) {
         for (CalculatorThread thread: this.threads){
+            if (!exit) {
             thread.join();
             switch (this.operationSign.ordinal()){
                 case (0):
@@ -58,13 +60,16 @@ public class ThreadGenerator {
                     throw new RuntimeException("Operation not exist!");
             }
         }
-        return result;
     }
-    
-    public void stop()
-    {
-        for (CalculatorThread thread: this.threads){
-            exit = false;
-        }
+    return result;
+}
+
+public void stop()
+{
+    for (CalculatorThread thread: this.threads){
+        exit = false;
+        System.out.println(thread.getName() + " is close");
     }
+
+}
 }
