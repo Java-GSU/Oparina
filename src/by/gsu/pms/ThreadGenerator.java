@@ -69,6 +69,7 @@ public void stop()
     for (CalculatorThread thread: this.threads){
         exit = false;
         System.out.println(thread.getName() + " is close");
+        System.out.println(thread.isAlive());
     }
 
 }
