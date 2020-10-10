@@ -8,6 +8,7 @@ public class ThreadGenerator {
 
     private CalculatorThread[] threads;
     private final OperationSign operationSign;
+    private boolean exit = false;
 
     public ThreadGenerator(int countOfThreads, OperationSign operationSign, int maxValue) {
         this.operationSign = operationSign;
