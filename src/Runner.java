@@ -42,6 +42,6 @@ public class Runner {
         calculator = new ThreadGenerator(countOfThreads, operation, maxValue);
         calculator.execute();
         System.out.println( ANSI_BLACK_BACKGROUND + "RESULT: " + calculator.getResult() + ANSI_RESET);
-       // calculator.close();
+        calculator.stop();
     }
 }
