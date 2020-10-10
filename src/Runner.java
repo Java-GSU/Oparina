@@ -35,8 +35,7 @@ public class Runner {
                 operation = OperationSign.MULTIPLICATION;
                 break;
             default:
-                System.out.println("FAIL! Operation not defined!");
-                break;
+                throw new RuntimeException("FAIL! Operation not defined!");
         }
 
         ThreadGenerator calculator;
