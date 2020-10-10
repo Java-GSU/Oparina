@@ -54,9 +54,7 @@ public class ThreadGenerator {
                     result *= thread.getResult();
                     break;
                 default:
-                    result = 0;
-                    System.out.println("Operation not exist!");
-                    break;
+                    throw new RuntimeException("Operation not exist!");
             }
         }
         return result;
