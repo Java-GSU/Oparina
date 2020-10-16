@@ -1,0 +1,2 @@
+daily-rate=25000
+indices=
