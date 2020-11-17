@@ -88,16 +88,6 @@ public class Runner {
             }
 
 
-//            System.out.println("Main and description: " + weatherMain + ", " + weatherDescription );
-//            System.out.println("Icon: " + weatherIcon );
-//            System.out.println("Current Temperature: " +  currentTemp + " C");
-//            System.out.println("Current Min Temperature: " + currentTempMin + " C");
-//            System.out.println("Current Max Temperature: " + currentTempMax + " C" );
-//            System.out.println("Current Pressure: " + pressure + " мм.рт.ст." );
-//            System.out.println("Current Humidity: " + humidity + "%" );
-//            System.out.println("Wind Speed: " + speedWind + " m/s " + angleWind);
-//            System.out.println("Cloudy: " + cloudy + "%" );
-
             String jsonString = new JSONObject()
                     .put("City", city)
                     .put("CodCity", cod_city)
