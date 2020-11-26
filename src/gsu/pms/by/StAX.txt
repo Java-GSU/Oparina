@@ -1,0 +1,9 @@
+[name = Головной банк, currency = usd, units = 1, buy = 2.615, sell = 2.659
+, name = Головной банк, currency = eur, units = 1, buy = 3.047, sell = 3.1
+, name = Головной банк, currency = rub, units = 100, buy = 3.282, sell = 3.373
+, name = Головной банк, currency = uah, units = 100, buy = 5, sell = 9.27
+, name = Головной банк, currency = gbp, units = 1, buy = 3.05, sell = 3.43
+, name = Головной банк, currency = chf, units = 1, buy = 2.77, sell = 2.98
+, name = Головной банк, currency = pln, units = 10, buy = 6.2, sell = 6.72
+, name = Головной банк, currency = cny, units = 10, buy = 3.46, sell = 3.96
+]

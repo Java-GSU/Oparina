@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<branches number="1">
+    <branch name="Головной банк">
+        <rate currency="usd" Units="1">
+                <buy>2.615</buy>
+                <sell>2.659</sell>
+        </rate>
+        <rate currency="eur" Units="1">
+                <buy>3.047</buy>
+                <sell>3.1</sell>
+        </rate>
+        <rate currency="rub" Units="100">
+                <buy>3.282</buy>
+                <sell>3.373</sell>
+        </rate>
+        <rate currency="uah" Units="100">
+            <buy>5</buy>
+            <sell>9.27</sell>
+        </rate>
+        <rate currency="gbp" Units="1">
+            <buy>3.05</buy>
+            <sell>3.43</sell>
+        </rate>
+        <rate currency="chf" Units="1">
+            <buy>2.77</buy>
+            <sell>2.98</sell>
+        </rate>
+        <rate currency="pln" Units="10">
+            <buy>6.2</buy>
+            <sell>6.72</sell>
+        </rate>
+        <rate currency="cny" Units="10">
+            <buy>3.46</buy>
+            <sell>3.96</sell>
+        </rate>
+        <rate currency="eur_rub">90.8</rate>
+        <rate currency="rub_eur">94</rate>
+        <rate currency="usd_rub">77.8</rate>
+        <rate currency="rub_usd">80.8</rate>
+        <rate currency="usd_uah">28.3</rate>
+        <rate currency="uah_usd">53.1</rate>
+        <rate currency="usd_pln">3.9</rate>
+        <rate currency="pln_usd">4.28</rate>
+        <rate currency="eur_usd">1.15</rate>
+        <rate currency="usd_eur">1.182</rate>
+        <rate currency="gbp_usd">1.16</rate>
+        <rate currency="usd_gbp">1.306</rate>
+        <rate currency="usd_chf">0.888</rate>
+        <rate currency="chf_usd">0.95</rate>
+    </branch>
+</branches>
