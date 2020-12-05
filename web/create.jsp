@@ -10,7 +10,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Create product</title>
+    <title>Create poem</title>
 </head>
 <body>
 <h3>New product</h3>
@@ -20,7 +20,7 @@
     <label>Year</label><br>
     <input name="year" type="number" min="100" /><br><br>
     <label>Text</label><br>
-    <input name="text"/><br><br>
+    <textarea rows="10" cols="45" name="text"></textarea><br><br>
     <input type="submit" value="Save" />
 </form>
 </body>
