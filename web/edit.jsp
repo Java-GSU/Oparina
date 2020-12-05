@@ -10,18 +10,16 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Edit product</title>
+    <title>Edit poem</title>
 </head>
 <body>
-<h3>Edit product</h3>
+<h3>Edit poem</h3>
 <form method="post">
-    <input type="hidden" value="${product.id}" name="id" />
-    <label>Name</label><br>
-    <input name="name" value="${product.name}" /><br><br>
+    <input type="hidden" value="${find.id}" name="id" />
     <label>Year</label><br>
-    <input name="year" value="${product.year}" type="number" min="100" /><br><br>
+    <input name="year" value="${find.year}" type="number" min="100" /><br><br>
     <label>Text</label><br>
-    <input name="text" value="${product.text}" /><br><br>
+    <textarea rows="10" cols="45" name="text" value="${find.text}"></textarea><br><br>
     <input type="submit" value="Send" />
 </form>
 </body>
