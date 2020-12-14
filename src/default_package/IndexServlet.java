@@ -20,6 +20,9 @@ public class IndexServlet extends HttpServlet {
             throws ServletException, IOException {
 
 
+//        ArrayList<Book> products = BookDB.select();
+//        request.setAttribute("products", products);
+
         getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
     }
 
@@ -31,6 +34,10 @@ public class IndexServlet extends HttpServlet {
             String nameAuthor = request.getParameter("nameAuthor");
             ArrayList<Book> search = BookDB.selectAuthor(nameAuthor);
             request.setAttribute("search", search);
+
+            String nameAutho = request.getParameter("nameAuthor");
+            ArrayList<Book> searc = BookDB.selectPoint(nameAutho);
+            request.setAttribute("searc", searc);
 
             getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
         }
