@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script type = "text/javascript" language="javascript">
+        $(document).ready(function() {
+
+            $.getJSON('weather.json', function(emp) {
+                $('#display').html('<p> City: ' + emp.City + '</p>');
+                $('#display').append('<p>Cod City : ' + emp.CodCity+ '</p>');
+                $('#display').append('<p> Description: ' + emp.MainWeather + " " + emp.Description+'</p>');
+                $('#display').append('<p> <img src=\'http://openweathermap.org/img/w/13n.png\'> </p>');
+                $('#display').append('<p> Temperature: ' + emp.CurrentTemperature + " C"+'</p>');
+                $('#display').append('<p> Max Temperature: ' + emp.MaxTemperature + " C"+'</p>');
+                $('#display').append('<p> Min Temperature: ' + emp.MinTemperature + " C"+'</p>');
+                $('#display').append('<p> Pressure: ' + emp.Pressure + " мм.рт.ст."+'</p>');
+                $('#display').append('<p> Humidity: ' + emp.Humidity + "%"+'</p>');
+                $('#display').append('<p> Wind: ' + emp.WindSpeed + " m/s " + emp.WindAngle + '</p>');
+                $('#display').append('<p> Cloudy: ' + emp.Cloudy + " %"+'</p>');
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+<div id = "display" style = "background-color:#379cb5; text-align: center;">
+
+</div>
+
+</body>
+</html>
